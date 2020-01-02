@@ -14,6 +14,6 @@ namespace NagaBugTracking.Data
         {
         }
 
-        public DbSet<BugModel> BugModel { get; set; }
+        public DbSet<Bug> Bug { get; set; }
     }
 }

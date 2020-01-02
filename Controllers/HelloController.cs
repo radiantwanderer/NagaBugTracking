@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace NagaBugTracking.Controllers
 {
-    public class BugController : Controller
+    public class HelloController : Controller
     {
         public IActionResult Index()
         {

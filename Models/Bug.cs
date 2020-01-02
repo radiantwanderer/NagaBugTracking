@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace NagaBugTracking.Models
 {
-    public class BugModel
+    public class Bug
     {
         public int Id { get; set; }
 
@@ -67,5 +67,10 @@ namespace NagaBugTracking.Models
 
         [DataType(DataType.Date)]
         private DateTime lastEdited;
+
+        public Bug()
+        {
+            
+        }
     }
 }
