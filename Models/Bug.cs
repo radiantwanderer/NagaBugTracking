@@ -34,13 +34,6 @@ namespace NagaBugTracking.Models
             Closed = 6
         }
 
-        public enum Platform
-        {
-            Windows = 0,
-            Mac = 1,
-            Linux = 2
-        }
-
         public bool Open { get; set; }
 
         public int Id { get; set; }
@@ -57,7 +50,6 @@ namespace NagaBugTracking.Models
         public BugType BugCategory { get; set; }
         public Severity SeverityLevel { get; set; }
         public Status State { get; set; }
-        public List<Platform> Platforms { get; set; }
 
         [DataType(DataType.Date)]
         public DateTime DateFound { get; set; }
