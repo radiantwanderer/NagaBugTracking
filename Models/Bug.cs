@@ -8,8 +8,6 @@ namespace NagaBugTracking.Models
 {
     public class Bug
     {
-        public int Id { get; set; }
-
         public enum BugType 
         { 
             Defect = 0,
@@ -38,35 +36,34 @@ namespace NagaBugTracking.Models
 
         public enum Platform
         {
-            Unspecified = 0,
-            Windows = 1,
-            Mac = 2,
-            Linux = 3,
-            All = 4
+            Windows = 0,
+            Mac = 1,
+            Linux = 2
         }
 
-        private bool open;
+        public bool Open { get; set; }
 
-        private float version;
-        private int priority;
+        public int Id { get; set; }
+        public int Priority { get; set; }
+        public float Version { get; set; }
 
-        private string summary;
-        private string description;
-        private string product;
-        private string component;
-        private string reporter;
-        private string assignee;
+        public string Summary { get; set; }
+        public string Description { get; set; }
+        public string Product { get; set; }
+        public string Component { get; set; }
+        public string Reporter { get; set; }
+        public string Assignee { get; set; }
 
-        private BugType bugType;
-        private Severity severity;
-        private Status status;
-        private Platform platform;
-
-        [DataType(DataType.Date)]
-        private DateTime dateFound;
+        public BugType BugCategory { get; set; }
+        public Severity SeverityLevel { get; set; }
+        public Status State { get; set; }
+        public List<Platform> Platforms { get; set; }
 
         [DataType(DataType.Date)]
-        private DateTime lastEdited;
+        public DateTime DateFound { get; set; }
+
+        [DataType(DataType.Date)]
+        public DateTime LastEdited { get; set; }
 
         public Bug()
         {
